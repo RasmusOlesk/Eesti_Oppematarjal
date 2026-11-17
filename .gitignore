@@ -7,7 +7,7 @@
 *.so
 *.so.*
 *.dylib
-
+backend/node_models/
 # Executables
 *.exe
 
@@ -16,3 +16,6 @@
 *.lvlps
 .cache/
 *.UserState
+backend/.env
+backend/.env.example
+/backend/node_modules
