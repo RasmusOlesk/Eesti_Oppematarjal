@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes } from "sequelize";
 
 
-const sequalize = new Sequelize(
+const sequelize = new Sequelize(
     process.env.DB_NAME!,
     process.env.DB_USERNAME!,
     process.env.DB_PASSWORD!,
@@ -15,21 +15,21 @@ const sequalize = new Sequelize(
 // admebasimigraatorr
 const connect = async (): Promise<void> => {
     try{
-        await sequalize.authenticate();
+        await sequelize.authenticate();
         console.log("Connection established");
     }
     catch (error)
     {
-        console.log("db connection eror", error)
+        console.log("db connection error", error)
 
     }
 }
 
 const db = {
-    Sequelize, sequalize, //(modelobj)
+    Sequelize, sequelize, //(modelobj)
 }
 const sync = async(): Promise<void> => {
-    await sequalize.sync({alter:true})
+    await sequelize.sync({alter:true})
     console.log("Sync")
 }
-export {db, sync, connect}
+export {db, sync, connect, sequelize}
