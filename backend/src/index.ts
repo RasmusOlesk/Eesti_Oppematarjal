@@ -16,5 +16,5 @@ app.listen(port, async() => {
         await sync()
         
     }
-    console.log('api jooskeb http://${host}:${port}');
+    console.log(`api jooskeb http://${host}:${port}`);
 })
