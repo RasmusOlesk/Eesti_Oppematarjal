@@ -17,5 +17,4 @@ backend/node_models/
 .cache/
 *.UserState
 backend/.env
-backend/.env.example
 /backend/node_modules
