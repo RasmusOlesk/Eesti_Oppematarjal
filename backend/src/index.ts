@@ -5,6 +5,7 @@ import {sync, sequelize} from "./config/db.ts"
 import authRoutes from "./routes/authRoutes.ts";
 import swaggerUi from "swagger-ui-express";
 import { swaggerSpec } from "./config/swagger.ts";
+import categoryRoutes from "./routes/categoryRoutes.ts";
 
 const port = Number(process.env.PORT) || 3000; //numeric port and reserve
 const host = "localhost";
@@ -20,6 +21,7 @@ app.use(express.json())
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/api/auth", authRoutes);
+app.use("/api/categories", categoryRoutes);
 
 // Temp. test for server and cors
 app.get("/api/health", (_req, res) => {
