@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import {sync, sequelize} from "./config/db.ts"
+import authRoutes from "./routes/authRoutes.ts";
 
 const port = Number(process.env.PORT) || 3000; //numeric port and reserve
 const host = "localhost";
@@ -11,8 +12,10 @@ const app = express();
 app.use(cors({
     origin: process.env.CORS_ORIGIN || "http://localhost:5173",
     credentials: true,
-  })); // cors lol not *
+  })); // cors lol not (*)
 app.use(express.json())
+
+app.use("/api/auth", authRoutes);
 
 // Temp. test for server and cors
 app.get("/api/health", (_req, res) => {
