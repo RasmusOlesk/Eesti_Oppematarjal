@@ -6,6 +6,7 @@ import authRoutes from "./routes/authRoutes.ts";
 import swaggerUi from "swagger-ui-express";
 import { swaggerSpec } from "./config/swagger.ts";
 import categoryRoutes from "./routes/categoryRoutes.ts";
+import materialRoutes from "./routes/materialRoutes.ts";
 
 const port = Number(process.env.PORT) || 3000; //numeric port and reserve
 const host = "localhost";
@@ -22,6 +23,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/categories", categoryRoutes);
+app.use("/api/materials", materialRoutes);
 
 // Temp. test for server and cors
 app.get("/api/health", (_req, res) => {
