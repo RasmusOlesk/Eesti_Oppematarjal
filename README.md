@@ -6,7 +6,7 @@ Eesti keele põhine IT õppematerjali kogumik
 
 # Arendajad
 
-Juri Sarki
+Jüri Sarki
 Rasmus Olesk
 
 # ERD
