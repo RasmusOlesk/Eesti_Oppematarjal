@@ -10,7 +10,7 @@ Juri Sarki
 Rasmus Olesk
 
 # Kuidas projekti käima panna
-Ava projekti kaust visual codega
+Ava projekti kaust visual code'iga
 ava kaustas "backend" terminal
 sisesta terminali käsklus
 ```
